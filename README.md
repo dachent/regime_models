@@ -105,3 +105,4 @@ A model is considered repo-compliant when:
 ## Current Models
 
 - [`reprod_mulliner2025_regimes`](./reprod_mulliner2025_regimes/README.md): reproduction of Mulliner, Harvey, Xia, Fang, and Van Hemert (2025) "Regimes"
+- [`reprod_kim2023_dynamic_asset_allocation`](./reprod_kim2023_dynamic_asset_allocation/README.md): reproduction of Kim and Kwon (2023) "Dynamic asset allocation strategy: an economic regime approach"
