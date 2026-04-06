@@ -1,0 +1,67 @@
+{
+  "reporting_window": {
+    "start": "1985-01-01",
+    "end": "2024-12-31"
+  },
+  "metrics": [
+    {
+      "Metric": "Q1 Sharpe",
+      "Paper": 0.95,
+      "Observed": 0.9566945627665706,
+      "Abs Delta": 0.006694562766570655,
+      "Status": "MATCH"
+    },
+    {
+      "Metric": "Q5 Sharpe",
+      "Paper": 0.17,
+      "Observed": 0.20920480038012446,
+      "Abs Delta": 0.039204800380124444,
+      "Status": "MATCH"
+    },
+    {
+      "Metric": "LO Sharpe",
+      "Paper": 1.0,
+      "Observed": 0.9632701009675784,
+      "Abs Delta": 0.03672989903242163,
+      "Status": "MATCH"
+    },
+    {
+      "Metric": "Q1-Q5 Sharpe",
+      "Paper": 0.82,
+      "Observed": 0.5816199281637251,
+      "Abs Delta": 0.23838007183627485,
+      "Status": "CLOSE"
+    },
+    {
+      "Metric": "Q1 Corr(LO)",
+      "Paper": 0.76,
+      "Observed": 0.6359138575914463,
+      "Abs Delta": 0.12408614240855376,
+      "Status": "CLOSE"
+    },
+    {
+      "Metric": "Q5 Corr(LO)",
+      "Paper": 0.48,
+      "Observed": 0.5212235845174373,
+      "Abs Delta": 0.04122358451743735,
+      "Status": "MATCH"
+    },
+    {
+      "Metric": "Q1-Q5 t-stat",
+      "Paper": 3.0,
+      "Observed": 3.6784874110817705,
+      "Abs Delta": 0.6784874110817705,
+      "Status": "GAP"
+    }
+  ],
+  "data_ranges": [
+    "S&P 500          1927-12 to 2026-04 (1181 obs)",
+    "10Y yield        1962-01 to 2026-04 (16078 obs)",
+    "VIX              1990-01 to 2026-04 (436 obs)",
+    "GS10             1953-04 to 2026-03 (876 obs)",
+    "TB3MS            1934-01 to 2026-03 (1107 obs)",
+    "WTISPLC          1946-01 to 2026-03 (963 obs)",
+    "Copper           1959-07 to 2026-04 (802 obs)",
+    "Factors          1963-07 to 2026-02 (752 obs)"
+  ]
+}
