@@ -1,0 +1,57 @@
+{
+  "data_start": "1991-01-01",
+  "data_end": "2024-01-01",
+  "cache_dir": "C:\\Users\\BorisVaisman\\OneDrive - Fertility Specialists Network\\Documents\\Playground 2\\regime_models\\reprod_shu2025_asset_specific_regime_forecasts\\cache",
+  "artifacts_dir": "C:\\Users\\BorisVaisman\\OneDrive - Fertility Specialists Network\\Documents\\Playground 2\\regime_models\\reprod_shu2025_asset_specific_regime_forecasts\\artifacts",
+  "workers": 8,
+  "strategies": [
+    {
+      "Label": "EW",
+      "Sharpe": 0.311,
+      "Ann. Return (%)": 4.39,
+      "Ann. Vol (%)": 13.46,
+      "Max DD (%)": -44.08,
+      "Calmar": 0.1
+    },
+    {
+      "Label": "EW+Regime",
+      "Sharpe": 0.139,
+      "Ann. Return (%)": 2.2,
+      "Ann. Vol (%)": 14.31,
+      "Max DD (%)": -45.07,
+      "Calmar": 0.049
+    },
+    {
+      "Label": "MinVar",
+      "Sharpe": 0.369,
+      "Ann. Return (%)": 2.62,
+      "Ann. Vol (%)": 6.55,
+      "Max DD (%)": -20.43,
+      "Calmar": 0.128
+    },
+    {
+      "Label": "MinVar+Regime",
+      "Sharpe": 0.437,
+      "Ann. Return (%)": 3.22,
+      "Ann. Vol (%)": 6.89,
+      "Max DD (%)": -23.21,
+      "Calmar": 0.139
+    },
+    {
+      "Label": "MV",
+      "Sharpe": 0.337,
+      "Ann. Return (%)": 3.73,
+      "Ann. Vol (%)": 10.45,
+      "Max DD (%)": -25.06,
+      "Calmar": 0.149
+    },
+    {
+      "Label": "MV+Regime",
+      "Sharpe": 0.113,
+      "Ann. Return (%)": 1.45,
+      "Ann. Vol (%)": 10.95,
+      "Max DD (%)": -31.0,
+      "Calmar": 0.047
+    }
+  ]
+}
