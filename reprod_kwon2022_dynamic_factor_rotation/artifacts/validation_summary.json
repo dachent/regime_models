@@ -1,0 +1,233 @@
+{
+  "config": {
+    "data_end": "2021-10-31",
+    "fred_vintage_date": "2021-10-31",
+    "lambda_value": 0.5,
+    "kappa": 0.5,
+    "delta": 5.0,
+    "slope_method": "center",
+    "benchmark_window": null
+  },
+  "table5": [
+    {
+      "Metric": "Benchmark Ann Return (%)",
+      "Paper": 0.444,
+      "Observed": 0.4709153446775186,
+      "Abs Delta": 0.026915344677518604
+    },
+    {
+      "Metric": "Benchmark Ann Vol (%)",
+      "Paper": 3.485,
+      "Observed": 3.4551207950403238,
+      "Abs Delta": 0.02987920495967611
+    },
+    {
+      "Metric": "Benchmark Sharpe",
+      "Paper": 0.127,
+      "Observed": 0.13629490041375605,
+      "Abs Delta": 0.009294900413756052
+    },
+    {
+      "Metric": "Benchmark Max DD (%)",
+      "Paper": -13.979,
+      "Observed": -14.015208063748208,
+      "Abs Delta": 0.03620806374820873
+    },
+    {
+      "Metric": "Benchmark Turnover (%)",
+      "Paper": 1.673,
+      "Observed": 0.08177667213673606,
+      "Abs Delta": 1.591223327863264
+    },
+    {
+      "Metric": "Dynamic Ann Return (%)",
+      "Paper": 5.042,
+      "Observed": 3.612800041935,
+      "Abs Delta": 1.4291999580649999
+    },
+    {
+      "Metric": "Dynamic Ann Vol (%)",
+      "Paper": 6.055,
+      "Observed": 5.580925392056722,
+      "Abs Delta": 0.4740746079432778
+    },
+    {
+      "Metric": "Dynamic Sharpe",
+      "Paper": 0.833,
+      "Observed": 0.647347847917312,
+      "Abs Delta": 0.18565215208268793
+    },
+    {
+      "Metric": "Dynamic Max DD (%)",
+      "Paper": -12.566,
+      "Observed": -8.869371060050424,
+      "Abs Delta": 3.6966289399495764
+    },
+    {
+      "Metric": "Dynamic Turnover (%)",
+      "Paper": 29.607,
+      "Observed": 33.869547759085144,
+      "Abs Delta": 4.262547759085145
+    },
+    {
+      "Metric": "Tracking Error (%)",
+      "Paper": 5.532,
+      "Observed": 5.007178978266549,
+      "Abs Delta": 0.5248210217334508
+    },
+    {
+      "Metric": "Information Ratio",
+      "Paper": 0.626,
+      "Observed": 0.6274760121207371,
+      "Abs Delta": 0.0014760121207371135
+    },
+    {
+      "Metric": "Break-even TC (%)",
+      "Paper": 1.202,
+      "Observed": 0.7017484633727181,
+      "Abs Delta": 0.5002515366272818
+    }
+  ],
+  "slope_method_comparison": [
+    {
+      "Slope Method": "center",
+      "Count Error": 26,
+      "Dynamic Sharpe": 0.647347847917312,
+      "Dynamic Sharpe Delta": 0.18565215208268793,
+      "Dynamic Ann Return (%)": 3.612800041935,
+      "Information Ratio": 0.6274760121207371
+    },
+    {
+      "Slope Method": "forward",
+      "Count Error": 44,
+      "Dynamic Sharpe": 0.32503707460998077,
+      "Dynamic Sharpe Delta": 0.5079629253900192,
+      "Dynamic Ann Return (%)": 1.8194544800257413,
+      "Information Ratio": 0.24005224588190172
+    },
+    {
+      "Slope Method": "backward",
+      "Count Error": 46,
+      "Dynamic Sharpe": 0.6968005105139393,
+      "Dynamic Sharpe Delta": 0.13619948948606064,
+      "Dynamic Ann Return (%)": 4.109506495243598,
+      "Information Ratio": 0.6845637314650626
+    }
+  ],
+  "robustness": {
+    "kappa": [
+      {
+        "Parameter": "kappa",
+        "Value": 0.3,
+        "Dynamic Ann Return (%)": 2.943005589838136,
+        "Dynamic Ann Vol (%)": 5.1756016587601845,
+        "Dynamic Sharpe": 0.5686306218827384,
+        "Dynamic Max DD (%)": -11.408926231475103,
+        "Dynamic Turnover (%)": 30.82333285242358,
+        "Tracking Error (%)": 4.320249922717679,
+        "Information Ratio": 0.5722100085370835,
+        "Break-even TC (%)": 0.6049522850890668
+      },
+      {
+        "Parameter": "kappa",
+        "Value": 0.5,
+        "Dynamic Ann Return (%)": 3.612800041935,
+        "Dynamic Ann Vol (%)": 5.580925392056722,
+        "Dynamic Sharpe": 0.647347847917312,
+        "Dynamic Max DD (%)": -8.869371060050424,
+        "Dynamic Turnover (%)": 33.869547759085144,
+        "Tracking Error (%)": 5.007178978266549,
+        "Information Ratio": 0.6274760121207371,
+        "Break-even TC (%)": 0.7017484633727181
+      },
+      {
+        "Parameter": "kappa",
+        "Value": 0.7,
+        "Dynamic Ann Return (%)": 4.0770187863305,
+        "Dynamic Ann Vol (%)": 6.025461923919426,
+        "Dynamic Sharpe": 0.6766317400738784,
+        "Dynamic Max DD (%)": -8.7550744800597,
+        "Dynamic Turnover (%)": 34.64559322365174,
+        "Tracking Error (%)": 5.623981717109451,
+        "Information Ratio": 0.6412011316968514,
+        "Break-even TC (%)": 0.7831152417292085
+      }
+    ],
+    "lambda": [
+      {
+        "Parameter": "lambda_value",
+        "Value": 0.3,
+        "Dynamic Ann Return (%)": 4.528601826636166,
+        "Dynamic Ann Vol (%)": 5.950373785615829,
+        "Dynamic Sharpe": 0.7610617399504226,
+        "Dynamic Max DD (%)": -11.009708751177627,
+        "Dynamic Turnover (%)": 35.591112270200924,
+        "Tracking Error (%)": 5.384756014941084,
+        "Information Ratio": 0.753550666121136,
+        "Break-even TC (%)": 0.8704411455023171
+      },
+      {
+        "Parameter": "lambda_value",
+        "Value": 0.5,
+        "Dynamic Ann Return (%)": 3.612800041935,
+        "Dynamic Ann Vol (%)": 5.580925392056722,
+        "Dynamic Sharpe": 0.647347847917312,
+        "Dynamic Max DD (%)": -8.869371060050424,
+        "Dynamic Turnover (%)": 33.869547759085144,
+        "Tracking Error (%)": 5.007178978266549,
+        "Information Ratio": 0.6274760121207371,
+        "Break-even TC (%)": 0.7017484633727181
+      },
+      {
+        "Parameter": "lambda_value",
+        "Value": 0.7,
+        "Dynamic Ann Return (%)": 4.065562559395812,
+        "Dynamic Ann Vol (%)": 5.622886956928063,
+        "Dynamic Sharpe": 0.7230382880784323,
+        "Dynamic Max DD (%)": -7.968706908919843,
+        "Dynamic Turnover (%)": 28.07374847170163,
+        "Tracking Error (%)": 5.003295566929071,
+        "Information Ratio": 0.718455899043482,
+        "Break-even TC (%)": 0.9793228909471194
+      }
+    ],
+    "delta": [
+      {
+        "Parameter": "delta",
+        "Value": 3.0,
+        "Dynamic Ann Return (%)": 4.519152513539669,
+        "Dynamic Ann Vol (%)": 6.415364750426007,
+        "Dynamic Sharpe": 0.7044264339357443,
+        "Dynamic Max DD (%)": -8.705656644246496,
+        "Dynamic Turnover (%)": 34.87424064625835,
+        "Tracking Error (%)": 6.093628165817865,
+        "Information Ratio": 0.6643393818432652,
+        "Break-even TC (%)": 0.870931989299453
+      },
+      {
+        "Parameter": "delta",
+        "Value": 5.0,
+        "Dynamic Ann Return (%)": 3.612800041935,
+        "Dynamic Ann Vol (%)": 5.580925392056722,
+        "Dynamic Sharpe": 0.647347847917312,
+        "Dynamic Max DD (%)": -8.869371060050424,
+        "Dynamic Turnover (%)": 33.869547759085144,
+        "Tracking Error (%)": 5.007178978266549,
+        "Information Ratio": 0.6274760121207371,
+        "Break-even TC (%)": 0.7017484633727181
+      },
+      {
+        "Parameter": "delta",
+        "Value": 7.0,
+        "Dynamic Ann Return (%)": 3.2603125517371754,
+        "Dynamic Ann Vol (%)": 5.301108405244557,
+        "Dynamic Sharpe": 0.6150246896501198,
+        "Dynamic Max DD (%)": -10.342063326185569,
+        "Dynamic Turnover (%)": 32.22979343792233,
+        "Tracking Error (%)": 4.58935739720742,
+        "Information Ratio": 0.6077969017529509,
+        "Break-even TC (%)": 0.6561730205857215
+      }
+    ]
+  }
+}

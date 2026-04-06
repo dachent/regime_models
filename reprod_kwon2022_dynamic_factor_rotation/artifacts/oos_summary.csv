@@ -1,0 +1,14 @@
+Metric,Observed
+Benchmark Ann Return (%),0.4709153446775186
+Benchmark Ann Vol (%),3.4551207950403238
+Benchmark Sharpe,0.13629490041375605
+Benchmark Max DD (%),-14.015208063748208
+Benchmark Turnover (%),0.08177667213673606
+Dynamic Ann Return (%),3.612800041935
+Dynamic Ann Vol (%),5.580925392056722
+Dynamic Sharpe,0.647347847917312
+Dynamic Max DD (%),-8.869371060050424
+Dynamic Turnover (%),33.869547759085144
+Tracking Error (%),5.007178978266549
+Information Ratio,0.6274760121207371
+Break-even TC (%),0.7017484633727181

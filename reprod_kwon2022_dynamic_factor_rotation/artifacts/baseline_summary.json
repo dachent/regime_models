@@ -1,0 +1,93 @@
+{
+  "paper": "Kwon (2022) Dynamic Factor Rotation Strategy: A Business Cycle Approach",
+  "config": {
+    "data_end": "2021-10-31",
+    "fred_vintage_date": "2021-10-31",
+    "lambda_value": 0.5,
+    "kappa": 0.5,
+    "delta": 5.0,
+    "slope_method": "center",
+    "benchmark_window": null
+  },
+  "pc1_explained_variance_ratio": 0.4237395217412461,
+  "table5": [
+    {
+      "Metric": "Benchmark Ann Return (%)",
+      "Paper": 0.444,
+      "Observed": 0.4709153446775186,
+      "Abs Delta": 0.026915344677518604
+    },
+    {
+      "Metric": "Benchmark Ann Vol (%)",
+      "Paper": 3.485,
+      "Observed": 3.4551207950403238,
+      "Abs Delta": 0.02987920495967611
+    },
+    {
+      "Metric": "Benchmark Sharpe",
+      "Paper": 0.127,
+      "Observed": 0.13629490041375605,
+      "Abs Delta": 0.009294900413756052
+    },
+    {
+      "Metric": "Benchmark Max DD (%)",
+      "Paper": -13.979,
+      "Observed": -14.015208063748208,
+      "Abs Delta": 0.03620806374820873
+    },
+    {
+      "Metric": "Benchmark Turnover (%)",
+      "Paper": 1.673,
+      "Observed": 0.08177667213673606,
+      "Abs Delta": 1.591223327863264
+    },
+    {
+      "Metric": "Dynamic Ann Return (%)",
+      "Paper": 5.042,
+      "Observed": 3.612800041935,
+      "Abs Delta": 1.4291999580649999
+    },
+    {
+      "Metric": "Dynamic Ann Vol (%)",
+      "Paper": 6.055,
+      "Observed": 5.580925392056722,
+      "Abs Delta": 0.4740746079432778
+    },
+    {
+      "Metric": "Dynamic Sharpe",
+      "Paper": 0.833,
+      "Observed": 0.647347847917312,
+      "Abs Delta": 0.18565215208268793
+    },
+    {
+      "Metric": "Dynamic Max DD (%)",
+      "Paper": -12.566,
+      "Observed": -8.869371060050424,
+      "Abs Delta": 3.6966289399495764
+    },
+    {
+      "Metric": "Dynamic Turnover (%)",
+      "Paper": 29.607,
+      "Observed": 33.869547759085144,
+      "Abs Delta": 4.262547759085145
+    },
+    {
+      "Metric": "Tracking Error (%)",
+      "Paper": 5.532,
+      "Observed": 5.007178978266549,
+      "Abs Delta": 0.5248210217334508
+    },
+    {
+      "Metric": "Information Ratio",
+      "Paper": 0.626,
+      "Observed": 0.6274760121207371,
+      "Abs Delta": 0.0014760121207371135
+    },
+    {
+      "Metric": "Break-even TC (%)",
+      "Paper": 1.202,
+      "Observed": 0.7017484633727181,
+      "Abs Delta": 0.5002515366272818
+    }
+  ]
+}
