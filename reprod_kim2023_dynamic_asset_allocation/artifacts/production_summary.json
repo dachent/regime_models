@@ -1,0 +1,94 @@
+{
+  "config": {
+    "lambda": 0.3,
+    "delta": 5.0,
+    "kappa": 0.09
+  },
+  "assets": [
+    "Stocks",
+    "Bonds",
+    "Commodities"
+  ],
+  "table3": [
+    {
+      "Metric": "Benchmark Return",
+      "Observed": 4.131221134731934,
+      "Paper": 3.59,
+      "Delta": 0.5412211347319342
+    },
+    {
+      "Metric": "Dynamic Return",
+      "Observed": 5.67569952175801,
+      "Paper": 5.07,
+      "Delta": 0.6056995217580097
+    },
+    {
+      "Metric": "Benchmark Vol",
+      "Observed": 6.5115273683143045,
+      "Paper": 6.46,
+      "Delta": 0.05152736831430449
+    },
+    {
+      "Metric": "Dynamic Vol",
+      "Observed": 6.498604475253895,
+      "Paper": 6.6,
+      "Delta": -0.10139552474610447
+    },
+    {
+      "Metric": "Benchmark Sharpe",
+      "Observed": 0.4642193020636911,
+      "Paper": 0.56,
+      "Delta": -0.09578069793630895
+    },
+    {
+      "Metric": "Dynamic Sharpe",
+      "Observed": 0.7028055168929367,
+      "Paper": 0.77,
+      "Delta": -0.06719448310706333
+    },
+    {
+      "Metric": "Benchmark MaxDD",
+      "Observed": 25.87475970599312,
+      "Paper": 28.99,
+      "Delta": -3.1152402940068775
+    },
+    {
+      "Metric": "Dynamic MaxDD",
+      "Observed": 21.984838359329938,
+      "Paper": 27.4,
+      "Delta": -5.4151616406700605
+    },
+    {
+      "Metric": "Dynamic Turnover",
+      "Observed": 8.440262446781297,
+      "Paper": 5.96,
+      "Delta": 2.480262446781297
+    },
+    {
+      "Metric": "Dynamic Tracking Error",
+      "Observed": 2.2126834059482134,
+      "Paper": 2.0,
+      "Delta": 0.21268340594821344
+    },
+    {
+      "Metric": "Dynamic Information Ratio",
+      "Observed": 0.6980114655689804,
+      "Paper": 0.74,
+      "Delta": -0.041988534431019575
+    },
+    {
+      "Metric": "Dynamic BreakEvenTC",
+      "Observed": 1.524911494917499,
+      "Paper": 1.95,
+      "Delta": -0.42508850508250084
+    }
+  ],
+  "pca_explained_variance": 0.39441375671981677,
+  "pca_loadings": {
+    "yield_spread": 0.2792239736518964,
+    "credit_spread": 0.6319563279793498,
+    "jobless_claims": 0.3000579778839273,
+    "building_permits": 0.4419536899805259,
+    "volatility_proxy": 0.48714198945041487
+  }
+}
