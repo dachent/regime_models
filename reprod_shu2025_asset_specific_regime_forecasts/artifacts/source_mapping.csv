@@ -1,0 +1,17 @@
+Model Variable,Production Source,Primary Ticker,Proxy Ticker,Endpoint / Contract,Notes
+LargeCap,Yahoo-compatible direct download,SPY,,yfinance-compatible adjusted close history,S&P 500 ETF proxy
+MidCap,Yahoo-compatible direct download,MDY,,yfinance-compatible adjusted close history,S&P 400 ETF proxy
+SmallCap,Yahoo-compatible direct download,IWM,,yfinance-compatible adjusted close history,Russell 2000 ETF proxy
+EAFE,Yahoo-compatible direct download,EFA,,yfinance-compatible adjusted close history,MSCI EAFE ETF proxy
+EM,Yahoo-compatible direct download,EEM,VEIEX,yfinance-compatible adjusted close history,MSCI Emerging Markets ETF proxy
+AggBond,Yahoo-compatible direct download,AGG,VBMFX,yfinance-compatible adjusted close history,US aggregate bond ETF proxy
+Treasury,Yahoo-compatible direct download,TLT,,yfinance-compatible adjusted close history,Long Treasury ETF proxy
+HighYield,Yahoo-compatible direct download,HYG,VWEHX,yfinance-compatible adjusted close history,US high yield ETF proxy
+Corporate,Yahoo-compatible direct download,LQD,,yfinance-compatible adjusted close history,US investment-grade corporate ETF proxy
+REIT,Yahoo-compatible direct download,VNQ,VGSIX,yfinance-compatible adjusted close history,US REIT ETF proxy
+Commodity,Yahoo-compatible direct download,GSG,PCRIX,yfinance-compatible adjusted close history,Broad commodity ETF proxy
+Gold,Yahoo-compatible direct download,GLD,USERX,yfinance-compatible adjusted close history,Gold ETF proxy
+GS2,FRED,GS2,,fredgraph.csv clean CSV endpoint,2-year Treasury yield macro feature
+GS10,FRED,GS10,,fredgraph.csv clean CSV endpoint,10-year Treasury yield macro feature
+TB3MS,FRED,TB3MS,,fredgraph.csv clean CSV endpoint,3-month T-bill risk-free proxy
+VIX,CBOE,VIX_History.csv,VIXCLS,CBOE direct CSV with FRED fallback,Daily VIX close series
