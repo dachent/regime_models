@@ -149,6 +149,24 @@ Residual mismatch is now driven by public proxies rather than code-spec drift:
 - `SPASTT01USM657N` and `BAMLCC0A0CMTRIV` are reasonable but not exact substitutes for MSCI USA TR and Barclays US Aggregate TR.
 - The public volatility splice uses `^GSPC` realized volatility plus `VXOCLS`, which is defensible but still not identical to the paper's proprietary workflow.
 
+## Paper Specification Assessment
+
+**Overall specification completeness: ~85%.**
+
+The four-regime framework (Heating Up, Goldilocks, Slow Growth, Stagflation), the growth and inflation indicators, the L1 trend filtering with lambda=0.3, and the Black-Litterman optimization with delta=5.0 and kappa=0.09 are all specified. The main gaps are in data proxy guidance and computational edge cases.
+
+| Ambiguity | Severity | Notes |
+| --- | --- | --- |
+| Commodity asset: S&P GSCI TR is proprietary | CRITICAL | PPIACO has 3.13% annualized volatility vs GSCI TR's 20.17%. This 17-percentage-point gap distorts risk-parity weights, Black-Litterman posteriors, and all commodity-related metrics. No public free daily total return series replicates GSCI TR. |
+| CPI-to-UIG inflation splicing method | MEDIUM | Code normalizes pre-1995 CPI to UIG scale using z-score matching. Paper likely does this but does not specify. |
+| PCA orientation rule for growth indicator | LOW | Code orients PC1 to correlate positively with building permits. Paper does not document orientation rule. |
+| Risk-free rate monthly conversion | LOW | Code divides TB3MS by 12 (simple). Paper does not specify simple vs compound conversion. |
+| Minimum sample size for regime-conditional returns | LOW | Code uses 6 observations. Paper does not state threshold. |
+| Black-Litterman confidence scaling derivation | LOW | Paper states kappa=0.09 but does not derive it. |
+| Stock and bond proxy substitutions | MEDIUM | SPASTT01USM657N and BAMLCC0A0CMTRIV are reasonable but not exact matches for MSCI USA TR and Barclays US Aggregate TR. Causes approximately 1-2 percentage point return and volatility deltas. |
+
+**Verdict:** The paper is well-specified enough that the regime logic is demonstrably correct --- all 12 regime-asset sign patterns match (12/12). The dynamic Sharpe gap is small (0.70 vs 0.77, 9% shortfall) and attributable primarily to the commodity proxy. This is the most successful reproduction in the repo relative to paper targets, despite having the most severe single data proxy issue (PPIACO for GSCI TR).
+
 ## Generated Artifacts
 
 Key tables:

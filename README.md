@@ -108,3 +108,26 @@ A model is considered repo-compliant when:
 - [`reprod_kwon2022_dynamic_factor_rotation`](./reprod_kwon2022_dynamic_factor_rotation/README.md): reproduction of Kwon (2022) "Dynamic Factor Rotation Strategy: A Business Cycle Approach"
 - [`reprod_kim2023_dynamic_asset_allocation`](./reprod_kim2023_dynamic_asset_allocation/README.md): reproduction of Kim and Kwon (2023) "Dynamic asset allocation strategy: an economic regime approach"
 - [`reprod_shu2025_asset_specific_regime_forecasts`](./reprod_shu2025_asset_specific_regime_forecasts/README.md): reproduction of Shu, Yu, and Mulvey (2025) "Dynamic asset allocation with asset-specific regime forecasts"
+
+## Cross-Repo Specification and Reproduction Assessment
+
+| Dimension | Mulliner 2025 | Kwon 2022 | Kim & Kwon 2023 | Shu 2025 |
+| --- | --- | --- | --- | --- |
+| Paper specification completeness | ~90% | ~95% | ~85% | ~70% |
+| Key metric match | Q1 Sharpe 0.957 vs 0.95 | IR 0.627 vs 0.626 | IR 0.70 vs 0.74 | MinVar+Regime 0.50 vs 0.94 |
+| Reproduction quality | 8/10 | 7.5/10 | 8.5/10 | 4/10 |
+| Dominant gap source | Bond proxy (stock-bond correlation sign flip) | Slope at L1 trend-filter kinks | Commodity proxy (PPIACO vs GSCI TR: 3% vol vs 20% vol) | Confounded: data + lambda shortcuts + implementation divergences |
+| Gap fixable with public data? | Partially | Possibly (with author guidance) | No (GSCI TR is proprietary) | Unknown (never properly tested) |
+
+### Cross-Cutting Pattern
+
+When the gap between a reproduction and its source paper traces to a single, identified cause, the reproduction succeeds directionally. When multiple sources of error compound and nobody isolates them, the reproduction fails.
+
+| Paper | Primary Gap Type | Confounded Variables | Reproduction Success |
+| --- | --- | --- | --- |
+| Kwon 2022 | 1 algorithmic ambiguity (slope at kinks) | 1 | High |
+| Kim & Kwon 2023 | 1 data proxy (commodity) | 1 | High |
+| Mulliner 2025 | 1 data proxy (bond for stock-bond correlation) | 1-2 | Good |
+| Shu 2025 | Multiple: data + lambda + implementation | 5+ | Failed |
+
+The three successful reproductions each have a narrow, well-identified residual. The Shu 2025 reproduction has at least five confounded failure modes (data proxy quality, lambda selection shortcuts, return convention, covariance shrinkage, optimizer choice) that were never disentangled. The forward plan for that reproduction calls for stage-by-stage validation to isolate variables --- the approach the other three reproductions effectively followed by having fewer variables to confound in the first place.

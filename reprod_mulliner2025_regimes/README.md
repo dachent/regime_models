@@ -160,6 +160,23 @@ Interpretation:
 - alternative stock-bond constructions can improve the sign of the MP x SB cross-correlation, but they do not close the full spread gap
 - end-of-month oil snapshots remain destructive, consistent with the original memo
 
+## Paper Specification Assessment
+
+**Overall specification completeness: ~90%.**
+
+The paper is well-specified. The seven-variable state vector, the Euclidean distance analog matching, the quintile sorting, and the equal-weight factor timing are all clearly described. The ambiguities are concentrated in data construction details rather than the core algorithm.
+
+| Ambiguity | Severity | Notes |
+| --- | --- | --- |
+| Z-score definition: divide by rolling 10yr std only, or also demean? | MEDIUM | Resolved in code as no demeaning (divide by rolling volatility only, no mean subtraction). Material because it means transformed variables retain level information. |
+| Bond total return construction for stock-bond correlation | HIGH | Paper does not specify the duration model used to convert yields to bond total returns. The reproduction uses carry-plus-duration from 10Y yields. This is the dominant residual gap (MP x SB correlation: +0.27 observed vs -0.36 paper). |
+| Rolling window minimum-periods handling | LOW | Code uses min_periods=60 for a 120-month window. Paper does not specify. |
+| Volatility pre-1990 splice methodology | LOW | Code uses 63-day realized volatility before VIX history. Paper does not specify the splice date or realized-vol calculation. |
+| Copper source (COMEX vs LME, daily vs monthly) | LOW | Code uses Macrotrends COMEX daily sampled to month-end. Paper does not specify. |
+| Minimum analog history threshold | LOW | Code requires 50 valid analogs (quintiles x 10). Paper does not specify. |
+
+**Verdict:** With Bloomberg bond index data (to fix the stock-bond correlation sign), this reproduction would likely match closely. The public-data limitation is narrow and well-identified. The algorithm itself is faithfully reproduced --- Q1 Sharpe matches nearly exactly (0.957 vs 0.95), and the Q1-Q5 Sharpe gap (0.58 vs 0.82) traces specifically to the stock-bond correlation variable.
+
 ## Generated Artifacts
 
 Committed outputs:
